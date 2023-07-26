@@ -22,7 +22,7 @@ const AddBlog = () => {
 
   const sendRequest = async (type = "signin") => {
     const res = await axios
-      .post("https://blog-dcwf.onrender.com/api/blog/add", {
+      .post("https://blog-tncl.onrender.com/api/blog/add", {
         title: inputs.title,
         content: inputs.content,
         image: inputs.image,

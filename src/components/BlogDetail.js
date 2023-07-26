@@ -20,7 +20,7 @@ function BlogDetail() {
 
   const fetchDetails = async () => {
     const res = await axios
-      .get(`https://blog-dcwf.onrender.com/api/blog/${id}`)
+      .get(`https://blog-tncl.onrender.com/api/blog/${id}`)
       .catch((err) => console.log(err));
 
     const data = res.data;
@@ -48,7 +48,7 @@ console.log(blog)
 
   const sendRequest = async () => {
     const res = await axios
-      .put(`https://blog-dcwf.onrender.com/api/blog/update/${id}`, {
+      .put(`https://blog-tncl.onrender.com/api/blog/update/${id}`, {
         title: inputs.title,
         content: inputs.content,
         image: inputs.image,
