@@ -36,7 +36,7 @@ const Blog = ({ title, content, image, userName, isUser, id }) => {
   };
 
   return (
-    <div className="card">
+    <div>
       <Card
       className="blog-card"
         mx={{
