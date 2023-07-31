@@ -38,25 +38,16 @@ const Blog = ({ title, content, image, userName, isUser, id }) => {
   return (
     <div>
       <Card
-        sx={{
+      className="blog-card"
+        mx={{
           width: "50%",
           margin: "auto",
-          marginTop: 2,
-          padding: 2,
+          marginTop: 1,
+
           boxShadow: "5px 5px 10px #ccc",
           ":hover": { boxShadow: "10px 10px 20px #ccc" },
         }}
       >
-        {isUser && (
-          <Box display={"flex"}>
-            <IconButton onClick={handleEdit} sx={{ marginLeft: "auto" }}>
-              <ModeEditOutlineOutlined color="info" />
-            </IconButton>
-            <IconButton onClick={handleDelete}>
-              <DeleteForeverOutlined color="error" />
-            </IconButton>
-          </Box>
-        )}
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
@@ -68,7 +59,7 @@ const Blog = ({ title, content, image, userName, isUser, id }) => {
         />
         <CardMedia
           component="img"
-          height="194"
+          style={{ width: "100%", height: "auto" }}
           image={image}
           alt="Paella dish"
         />
@@ -80,6 +71,16 @@ const Blog = ({ title, content, image, userName, isUser, id }) => {
             {content}
           </Typography>
         </CardContent>
+        {isUser && (
+          <Box display={"flex"}>
+            <IconButton onClick={handleEdit} sx={{ marginLeft: "auto" }}>
+              <ModeEditOutlineOutlined color="info" />
+            </IconButton>
+            <IconButton onClick={handleDelete}>
+              <DeleteForeverOutlined color="error" />
+            </IconButton>
+          </Box>
+        )}
       </Card>
     </div>
   );

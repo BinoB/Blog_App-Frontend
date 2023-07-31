@@ -24,7 +24,7 @@ function UserBlogs() {
         {user &&
           user.blogs &&
           user.blogs.map((blog, index) => (
-            <Grid key={blog.id} item  sm={6} >
+            <Grid key={blog.id} item  sm={4} >
               <Blog
                 id={blog._id}
                 key={index}

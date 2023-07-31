@@ -21,9 +21,9 @@ function Blogs() {
 
   return (
     <div>
-      <Grid container spacing={2}>
+      <Grid container spacing={0}>
         {blogs.map((blog, index) => (
-          <Grid key={blog.id} item  sm={6} >
+          <Grid key={blog.id} item  sm={4} >
             <Blog
               id={blog._id}
               isUser={localStorage.getItem("userId") === blog.user._id}
