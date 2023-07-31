@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Blog from "./Blog";
+import { Grid } from "@mui/material";
 
 function UserBlogs() {
   const [user, setUser] = useState();
@@ -12,27 +13,30 @@ function UserBlogs() {
     const data = await res.data;
     return data;
   };
+
   useEffect(() => {
     sendRequest().then((data) => setUser(data.user));
   }, []);
 
-
   return (
     <div>
-      {" "}
-      {user &&
-        user.blogs &&
-        user.blogs.map((blog, index) => (
-          <Blog
-            id={blog._id}
-            key={index}
-            isUser={true}
-            title={blog.title}
-            content={blog.content}
-            image={blog.image}
-            userName={user.name}
-          />
-        ))}
+      <Grid container spacing={1}>
+        {user &&
+          user.blogs &&
+          user.blogs.map((blog, index) => (
+            <Grid key={blog.id} item  sm={6} >
+              <Blog
+                id={blog._id}
+                key={index}
+                isUser={true}
+                title={blog.title}
+                content={blog.content}
+                image={blog.image}
+                userName={user.name}
+              />
+            </Grid>
+          ))}
+      </Grid>
     </div>
   );
 }

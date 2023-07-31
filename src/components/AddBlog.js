@@ -46,9 +46,9 @@ const AddBlog = () => {
       <form onSubmit={handleSubmit}>
         <Box
           border={2}
-          borderColor="secondary.main"
+          borderColor="primary.main"
           borderRadius={10}
-          boxShadow="10px 10px 20px #ccc"
+          boxShadow="5px 05px 10px #ffe648"
           padding={3}
           margin={"auto"}
           marginTop={5}
@@ -90,10 +90,11 @@ const AddBlog = () => {
             variant="outlined"
           />
           <Button
-            sx={{ mt: 2, borderRadius: 4 }}
+            sx={{ mt: 5, borderRadius: 4,width: "200px" , margin: "auto"}}
             variant="contained"
             color="warning"
             type="submit"
+            
           >
             Submit Blog
           </Button>

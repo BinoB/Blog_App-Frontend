@@ -21,7 +21,7 @@ function Header() {
       position="sticky"
       sx={{
         background:
-          "linear-gradient(90deg, rgba(240,13,205,1) 0%, rgba(0,212,255,1) 100%)",
+          "rgba(240,13,205,1) 0%, rgba(0,212,255,1) 100%)",
       }}
     >
       <Toolbar>
@@ -29,7 +29,7 @@ function Header() {
           component={Link}
           to="/"
           variant="h4"
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: "none", color:"white" }}
         >
           Blog App
         </Typography>
