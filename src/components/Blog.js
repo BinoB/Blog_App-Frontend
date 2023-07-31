@@ -36,7 +36,7 @@ const Blog = ({ title, content, image, userName, isUser, id }) => {
   };
 
   return (
-    <div>
+    <div className="card">
       <Card
       className="blog-card"
         mx={{
@@ -50,7 +50,7 @@ const Blog = ({ title, content, image, userName, isUser, id }) => {
       >
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
+            <Avatar sx={{ bgcolor: "gray" }} aria-label="recipe">
               {userName && userName.charAt(0)}
             </Avatar>
           }
